@@ -1,10 +1,6 @@
 package datastructures;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Comparator;
 import model.Aluno;
 
@@ -82,7 +78,7 @@ public class ListaEncadeada<T> {
 		tail = novo;
 	}
 
-	public static <T> ListaEncadeada<T> loadFromFile() throws IOException {
+	public static <T> ListaEncadeada<T> loadFromFile() throws Exception {
 		BufferedReader reader = null;
 		String linha = null;
 		int i = 0;

@@ -1,10 +1,6 @@
 package test;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 import comparators.SearchByAgeAndCity;
 import comparators.SearchByEmail;
@@ -20,9 +16,8 @@ public class ProgramaB_Alunos {
 	private static final int idade = 0;
 	private static final String cidade = "";
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		BufferedReader reader = null;
-		String linha = null;
 		try {
 			reader = new BufferedReader(new InputStreamReader(new FileInputStream("data/alunos.csv")));
 
