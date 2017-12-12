@@ -53,7 +53,8 @@ public class ListaEncadeada<T> {
 
 	private No head;
 	private No tail;
-
+	
+	//Método que verifica se a head da lista está vazia
 	public boolean isEmpty() {
 		return head == null;
 	}
@@ -68,7 +69,8 @@ public class ListaEncadeada<T> {
 		novo.proximo = head;
 		head = novo;
 	}
-
+	
+	//Método que serve para adicionar um elemento à lista
 	public void append(T dado) {
 		No novo = new No(dado);
 		if (tail != null) {
