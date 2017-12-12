@@ -27,6 +27,12 @@ public class Aluno {
 		this.cidade = cidade;
 	}
 
+	// Construtor para APS3
+	public Aluno(String email, String empresa) {
+		this.email = email;
+		this.empresa = empresa;
+	}
+
 	public String getMatricula() {
 		return matricula;
 	}

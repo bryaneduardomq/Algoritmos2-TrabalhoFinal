@@ -2,6 +2,7 @@ package test;
 
 import java.io.*;
 import comparators.SearchByAgeAndCity;
+import comparators.SearchByCompanyAndEmail;
 import comparators.SearchByEmail;
 import comparators.SearchByName;
 import datastructures.ListaEncadeada;
@@ -13,6 +14,7 @@ public class ProgramaC_Alunos {
 	private static final String email = "parksgilliam@fishland.com";
 	private static final int idade = 34;
 	private static final String cidade = "Mooresburg";
+	private static final String empresa = "FISHLAND";
 
 	public static void main(String[] args) throws Exception {
 
@@ -26,10 +28,15 @@ public class ProgramaC_Alunos {
 		}
 
 		ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile();
+		
 		Aluno busca = new Aluno(nome, email, idade, cidade);
 		System.out.println(lista.search(busca, new SearchByName()));
 		System.out.println(lista.search(busca, new SearchByEmail()));
 		System.out.println(lista.search(busca, new SearchByAgeAndCity()));
+		
+		//APS3
+		Aluno procura = new Aluno(email, empresa);
+		System.out.println(lista.search(procura, new SearchByCompanyAndEmail()));
 	}
 
 }
