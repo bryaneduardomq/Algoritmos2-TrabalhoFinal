@@ -20,8 +20,7 @@ public class ProgramaA_Alunos {
 			System.out.println("Arquivo não encontrado" + e);
 			System.exit(0);
 		}
-		// ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile(arquivo,
-		// new OrdenaPorEmail());
+		//ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile(new OrdenaPorEmail());
 
 		/*
 		 * Iterador<Aluno> iterador = lista.iterador(); while

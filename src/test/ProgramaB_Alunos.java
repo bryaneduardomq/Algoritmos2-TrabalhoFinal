@@ -28,7 +28,7 @@ public class ProgramaB_Alunos {
 
 		} catch (FileNotFoundException e) {
 			System.out.println("Arquivo não encontrado" + e);
-			System.exit(0);
+			System.exit(1);
 		}
 
 		ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile();

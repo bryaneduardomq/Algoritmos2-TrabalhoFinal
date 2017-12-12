@@ -127,9 +127,15 @@ public class ListaEncadeada<T> {
 	 */
 
 	
-	//Método para impressão dos elementos
-	public T search(T key, Comparator<T> cmp) {
-
+	//Método para procura
+	public T search(T key, Comparator<T> cmp){
+		ListaEncadeada<T>.No no = head;
+		while (no != null){
+			if(cmp.compare(key, no.dado) == 0){
+				return no.dado;
+			}
+			no = no.proximo;
+		}
 		return null;
 	}
 	

@@ -12,10 +12,10 @@ import model.Aluno;
 
 public class ProgramaC_Alunos {
 
-	private static final String nome = "";
-	private static final String email = "";
-	private static final int idade = 0;
-	private static final String cidade = "";
+	private static final String nome = "Parks Gilliam";
+	private static final String email = "parksgilliam@fishland.com";
+	private static final int idade = 34;
+	private static final String cidade = "Mooresburg";
 
 	public static void main(String[] args) throws IOException {
 
@@ -26,7 +26,7 @@ public class ProgramaC_Alunos {
 
 		} catch (FileNotFoundException e) {
 			System.out.println("Arquivo não encontrado" + e);
-			System.exit(0);
+			System.exit(1);
 		}
 
 		ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile();
